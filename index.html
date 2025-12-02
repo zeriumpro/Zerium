@@ -1,77 +1,174 @@
 <!DOCTYPE html>
-color: black;
-}
-.btn-pink {
-background: #ec4899;
-color: white;
-}
-.hero-img img {
-width: 100%;
-border-radius: 15px;
-}
-.cards {
-margin-top: 50px;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-}
-.card {
-background: #1a1a1a;
-padding-bottom: 20px;
-border-radius: 12px;
-overflow: hidden;
-}
-.card img {
-width: 100%;
-height: 160px;
-object-fit: cover;
-}
-.card h3 {
-margin: 10px;
-font-size: 18px;
-}
-.card p {
-margin: 0 10px 15px;
-color: #bbb;
-}
-.card-btn {
-margin-left: 10px;
-padding: 10px 15px;
-background: #4f46e5;
-color: white;
-border-radius: 8px;
-text-decoration: none;
-}
-.footer {
-margin-top: 60px;
-padding-top: 20px;
-border-top: 1px solid #222;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.footer-logos img {
-width: 120px;
-}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerium</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f0f17;
+            color: #ffffff;
+        }
 
+        header {
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0a0a10;
+            border-bottom: 1px solid #1d1d2e;
+        }
 
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #b38bff;
+        }
 
-// -----------------------------
-// script.js
-// -----------------------------
-// Copie o conteúdo abaixo para um arquivo script.js
+        main {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
+        .hero {
+            background: #161622;
+            padding: 40px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #24243a;
+        }
 
-// Quando você me mandar os links eu substituo aqui automaticamente
-const ML_LINK = "https://www.mercadolivre.com.br";
-const SHOPEE_LINK = "https://shopee.com.br";
+        .hero h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
+        .hero p {
+            font-size: 16px;
+            color: #cfcfe8;
+            margin-bottom: 25px;
+        }
 
-document.getElementById("mlLink").href = ML_LINK;
-document.getElementById("shopeeLink").href = SHOPEE_LINK;
-document.getElementById("mlBtn").href = ML_LINK;
-document.getElementById("shopeeBtn").href = SHOPEE_LINK;
-document.getElementById("card1").href = ML_LINK;
-document.getElementById("card2").href = SHOPEE_LINK;
-document.getElementById("card3").href = ML_LINK;
+        .btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            background: #b38bff;
+            color: #000;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #c7a5ff;
+        }
+
+        .categories-title {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 26px;
+            color: #dcdcff;
+        }
+
+        .cards {
+            margin-top: 25px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card {
+            background: #1a1a28;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #28283f;
+        }
+
+        .card h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #b38bff;
+        }
+
+        .card p {
+            margin: 0;
+            margin-bottom: 15px;
+            color: #c9c9e0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 25px;
+            color: #9e9ebb;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Zerium</div>
+    </header>
+
+    <main>
+
+        <!-- HERO / TOPO -->
+        <section class="hero">
+            <h1>Achados e ofertas selecionadas — tudo em um só lugar</h1>
+            <p>Ofertas organizadas e selecionadas com cuidado, incluindo links diretos para Amazon, Shopee e outros marketplaces.</p>
+
+            <div class="btns">
+                <a class="btn" href="#">Ver produtos</a>
+                <a class="btn" href="#">Explorar categorias</a>
+            </div>
+        </section>
+
+        <!-- CATEGORIAS -->
+        <h2 class="categories-title">Nossas categorias</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Beleza e Skin Care</h3>
+                <p>Produtos selecionados e confiáveis de cuidados pessoais.</p>
+                <a class="btn" href="#">Ver ofertas</a>
+            </div>
+
+            <div class="card">
+                <h3>Eletrônicos</h3>
+                <p>Gadgets, acessórios, itens úteis e aprovados.</p>
+                <a class="btn" href="#">Ver eletrônicos</a>
+            </div>
+
+            <div class="card">
+                <h3>Acessórios variados</h3>
+                <p>Itens populares, úteis e com ótimo custo-benefício.</p>
+                <a class="btn" href="#">Explorar acessórios</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        © 2025 Zerium — Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
